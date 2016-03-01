@@ -9,6 +9,6 @@ export default Ember.Route.extend({
         legislators.push(legislator);
       });
       return legislators;
-    })
+    });
   }
 });
