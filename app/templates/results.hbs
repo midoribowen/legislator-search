@@ -1,0 +1,15 @@
+<ul>
+  {{#each model as |legislator|}}
+    <li> {{legislator.first_name}} {{legislator.last_name}}
+      <ul>
+        <li>Contact: <a href={{legislator.contact_form}}>{{legislator.contact_form}}</a></li>
+      {{#if legislator.youtube_id}}
+        <li>
+          YouTube Channel: <a href="https://www.youtube.com/user/{{legislator.youtube_id}}">{{legislator.youtube_id}}</a>
+        </li>
+        {{else}}
+      {{/if}}
+      </ul>
+    </li>
+  {{/each}}
+</ul>
