@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-md-12">
+    <h2>Bills Sponsored By {{model.0.sponsor.title}}. {{model.0.sponsor.last_name}}</h2>
+    <h4>114th Congress of the U.S. {{capitalize model.0.chamber}}{{# if (eq model.0.chamber 'house')}} of Representatives{{/ if}}</h4>
+  </div>
+</div>
+
+<div class="row">
+  {{#each model as |bill|}}
+  <div class="col-md-8 col-md-offset-2 bill">
+    {{bill-tile bill=bill}}
+  </div>
+  {{/each}}
+</div>

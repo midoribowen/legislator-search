@@ -1,16 +1,7 @@
-<ul>
+<div class="row">
   {{#each model as |legislator|}}
-    <li> {{legislator.first_name}} {{legislator.last_name}}<br>
-         {{legislator.state_name}} - {{capitalize legislator.chamber}}
-      <ul>
-        <li>Contact: <a href={{legislator.contact_form}}>{{legislator.contact_form}}</a></li>
-      {{#if legislator.youtube_id}}
-        <li>
-          YouTube Channel: <a href="https://www.youtube.com/user/{{legislator.youtube_id}}">{{legislator.youtube_id}}</a>
-        </li>
-        {{else}}
-      {{/if}}
-      </ul>
-    </li>
+  <div class="col-md-8 col-md-offset-2 legislator">
+    {{legislator-tile legislator=legislator}}
+  </div>
   {{/each}}
-</ul>
+</div>

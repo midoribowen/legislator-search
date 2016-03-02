@@ -1,0 +1,11 @@
+<h3>{{bill.short_title}}</h3>
+
+<h4>{{bill.official_title}}</h4>
+<div class="row">
+  <div class="col-sm-6">
+    <h5><a href={{bill.last_version.urls.pdf}}>Read More About {{bill.bill_id}}</a></h5>
+  </div>
+  <div class="col-sm-6">
+    <h5 align="right"><em>Most recent version: {{moment-format bill.last_version_on 'LL'}}</em></h5>
+  </div>
+</div>
